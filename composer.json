@@ -1,11 +1,11 @@
 {
     "name": "nece001/php-gears",
-    "description": "php 无限级分类树",
+    "description": "php 基础功能",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Nece001\\Gears\\": "src/"
+            "Nece\\Gears\\": "src/"
         }
     },
     "authors": [
