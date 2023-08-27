@@ -21,7 +21,7 @@ class Paginator implements ArrayAccess, Countable, IteratorAggregate
     private $total;
     private $current_page;
     private $last_page;
-    private $items;
+    private $items = array();
 
     /**
      * 构造

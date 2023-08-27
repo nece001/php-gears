@@ -22,7 +22,7 @@ abstract class RepositoryAbstract
      *
      * @return boolean
      */
-    protected function valid(array $params, mixed $key, $allow_empty = false): bool
+    protected function valid(array $params, $key, $allow_empty = false): bool
     {
         if (isset($params[$key])) {
             if (!is_null($params[$key])) {
@@ -50,7 +50,7 @@ abstract class RepositoryAbstract
      *
      * @return mixed
      */
-    protected function getValue(array $params, mixed $key, mixed $default = null): mixed
+    protected function getValue(array $params, $key, $default = null)
     {
         if (isset($params[$key])) {
             return $params[$key];
