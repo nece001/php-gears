@@ -2,6 +2,8 @@
 
 namespace Nece\Gears;
 
+use Exception;
+
 /**
  * 验证接口
  *
@@ -10,6 +12,20 @@ namespace Nece\Gears;
  */
 interface IValidate
 {
+
+    /**
+     * 构建异常
+     *
+     * @Author nece001@163.com
+     * @DateTime 2023-08-27
+     *
+     * @param string $message
+     * @param string $code
+     *
+     * @return Exception
+     */
+    public function buildException($message, $code = ''): Exception;
+
     /**
      * 验证数据
      *
