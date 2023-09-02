@@ -2,7 +2,7 @@
 
 namespace Nece\Gears;
 
-use Exception;
+use Nece\Gears\ValidateException;
 
 /**
  * 验证接口
@@ -12,7 +12,6 @@ use Exception;
  */
 interface IValidator
 {
-
     /**
      * 构建异常
      *
@@ -22,9 +21,9 @@ interface IValidator
      * @param string $message
      * @param string $code
      *
-     * @return Exception
+     * @return ValidateException
      */
-    public function buildException($message, $code = ''): Exception;
+    public function buildException($message, $code = ''): ValidateException;
 
     /**
      * 验证数据
