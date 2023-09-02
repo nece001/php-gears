@@ -10,7 +10,7 @@ use Exception;
  * @Author nece001@163.com
  * @DateTime 2023-07-10
  */
-interface IValidate
+interface IValidator
 {
 
     /**
