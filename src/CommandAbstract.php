@@ -3,7 +3,7 @@
 namespace Nece\Gears;
 
 /**
- * 领域服务抽象类
+ * 领域命令抽象类
  *
  * @Author nece001@163.com
  * @DateTime 2023-08-27
@@ -27,7 +27,7 @@ abstract class CommandAbstract
      *
      * @param IValidate $validate 验证器
      */
-    public function __construct(IValidate $validate)
+    public function __construct(IValidator $validate)
     {
         $this->validate = $validate;
     }
