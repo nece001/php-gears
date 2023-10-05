@@ -1,6 +1,6 @@
 <?php
 
-namespace Nece\Gears\Commnads;
+namespace Nece\Gears\Commands;
 
 use Nece\Gears\CommandAbstract;
 use Nece\Gears\Paginator;
