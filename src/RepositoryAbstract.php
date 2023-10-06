@@ -2,6 +2,8 @@
 
 namespace Nece\Gears;
 
+use Nece\Util\ArrayUtil;
+
 /**
  * 仓储类抽象基类
  *
@@ -22,20 +24,9 @@ abstract class RepositoryAbstract
      *
      * @return boolean
      */
-    protected function valid(array $params, $key, $allow_empty = false): bool
+    protected function hasValue(array $params, $key, $allow_empty = false): bool
     {
-        if (isset($params[$key])) {
-            if (!is_null($params[$key])) {
-                if ($allow_empty) {
-                    return true;
-                }
-
-                if ($params[$key] !== '') {
-                    return true;
-                }
-            }
-        }
-        return false;
+        return ArrayUtil::hasValue($params, $key, $allow_empty);
     }
 
     /**
@@ -52,10 +43,6 @@ abstract class RepositoryAbstract
      */
     protected function getValue(array $params, $key, $default = null)
     {
-        if (isset($params[$key])) {
-            return $params[$key];
-        }
-
-        return $default;
+        return ArrayUtil::getValue($params, $key, $default);
     }
 }
