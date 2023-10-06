@@ -13,11 +13,11 @@ abstract class CommandAbstract
     /**
      * 验证器
      *
-     * @var IValidate
+     * @var IValidator
      * @Author nece001@163.com
      * @DateTime 2023-07-10
      */
-    protected $validate;
+    protected $validator;
 
     /**
      * 构造
@@ -25,11 +25,11 @@ abstract class CommandAbstract
      * @Author nece001@163.com
      * @DateTime 2023-08-27
      *
-     * @param IValidate $validate 验证器
+     * @param IValidator $validate 验证器
      */
-    public function __construct(IValidator $validate)
+    public function __construct(IValidator $validator)
     {
-        $this->validate = $validate;
+        $this->validator = $validator;
     }
 
     /**
